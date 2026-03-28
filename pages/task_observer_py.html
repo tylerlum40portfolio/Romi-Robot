@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>task_observer.py Documentation</title>
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f8;
+color:#333;
+line-height:1.7;
+}
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+.card{
+background:white;
+padding:28px;
+border-radius:10px;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+h1,h2,h3{
+color:#1f2933;
+}
+a{
+color:#1f5fbf;
+text-decoration:none;
+font-weight:bold;
+}
+a:hover{
+text-decoration:underline;
+}
+code{
+background:#eef2f5;
+padding:2px 6px;
+border-radius:4px;
+}
+pre{
+background:#eef2f5;
+padding:16px;
+border-radius:8px;
+overflow-x:auto;
+}
+details{
+margin-top:18px;
+background:#f8fafc;
+border:1px solid #dbe4ea;
+border-radius:8px;
+padding:12px 16px;
+}
+summary{
+cursor:pointer;
+font-weight:bold;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+}
+th, td{
+border:1px solid #dbe4ea;
+padding:8px;
+text-align:left;
+vertical-align:top;
+}
+th{
+background:#eef2f5;
+}
+ul{
+padding-left:24px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<p><a href="../index.html">← Back to Main Portfolio</a></p>
+<div class="card">
+<h1>task_observer.py</h1>
+
+<h2>Purpose</h2>
+<p>
+This file implements the discrete-time observer task. It reads motor-input Shares, measured wheel displacement Shares, and IMU heading/yaw-rate Shares, then estimates forward position, heading, and wheel speeds. It can also stream those estimated states over UART.
+</p>
+<h2>Main Role</h2>
+<p>
+This task provides model-based state estimation. It goes beyond simply relaying measurements and instead uses a state-space update to estimate the robot’s internal motion state.
+</p>
+<h2>Key Responsibilities</h2>
+<ul>
+<li>Read measured left/right wheel displacement</li>
+<li>Read measured heading and yaw rate</li>
+<li>Read left/right motor voltages</li>
+<li>Load observer matrices from <code>observer_matrices.py</code></li>
+<li>Update the estimated state vector every cycle</li>
+<li>Publish estimated forward position, heading, and wheel speeds</li>
+<li>Optionally stream estimated-state data over UART</li>
+<li>Track estimated x-y path while streaming</li>
+</ul>
+<h2>Important Attributes / Shares / Variables</h2>
+<table>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td><code>uL</code>, <code>uR</code></td><td>Input Shares for left and right motor voltage.</td></tr>
+<tr><td><code>sL</code>, <code>sR</code></td><td>Measured wheel displacement Shares.</td></tr>
+<tr><td><code>psi</code>, <code>psiDot</code></td><td>Measured heading and yaw-rate Shares.</td></tr>
+<tr><td><code>s_hat</code>, <code>psi_hat</code>, <code>wL_hat</code>, <code>wR_hat</code></td><td>Output Shares for the estimated states.</td></tr>
+<tr><td><code>_xhat</code></td><td>Internal estimated state vector.</td></tr>
+<tr><td><code>_Ad</code>, <code>_Bd</code></td><td>State-space matrices used for the observer update.</td></tr>
+<tr><td><code>_use_bd_full</code></td><td>Indicates whether the full input matrix form is being used.</td></tr>
+<tr><td><code>_stream_hz</code></td><td>Streaming rate for UART output.</td></tr>
+<tr><td><code>_x_path</code>, <code>_y_path</code></td><td>Integrated path values used during streamed output.</td></tr>
+</table>
+<h2>Important Methods / Behavior</h2>
+<table>
+<tr><th>Method / Logic</th><th>Description</th></tr>
+<tr><td><code>_load_matrices()</code></td><td>Attempts to import and validate observer matrices.</td></tr>
+<tr><td><code>_startup_print()</code></td><td>Prints a summary of observer startup status.</td></tr>
+<tr><td><code>_reset_stream_path()</code></td><td>Zeros the streamed x-y path and writes a header over UART.</td></tr>
+<tr><td><code>_maybe_stream_sample()</code></td><td>Streams one line of estimated-state data if streaming is enabled and enough time has elapsed.</td></tr>
+<tr><td>Fallback mode</td><td>If matrices are unavailable, falls back to a simpler estimate based on measured values.</td></tr>
+</table>
+<details>
+<summary>Click to view engineering notes</summary>
+<p>
+This file is one of the strongest demonstrations of controls theory in the project. It shows that the robot is not just reacting to measurements, but also estimating its internal state using a model-based approach.
+</p>
+</details>
+<h2>Why This File Matters</h2>
+<p>
+This file gives the project much more technical depth. It bridges the gap between raw sensing and state estimation, which is one of the clearest connections between the final robot and the theory covered in class.
+</p>
+<p><a href="../task_observer.py" target="_blank">Open raw task_observer.py file</a></p>
+
+</div>
+</div>
+</body>
+</html>

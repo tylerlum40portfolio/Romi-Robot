@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>main.py Documentation</title>
+<style>
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f8;
+color:#333;
+line-height:1.7;
+}
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+.card{
+background:white;
+padding:28px;
+border-radius:10px;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+h1,h2,h3{
+color:#1f2933;
+}
+a{
+color:#1f5fbf;
+text-decoration:none;
+font-weight:bold;
+}
+a:hover{
+text-decoration:underline;
+}
+code{
+background:#eef2f5;
+padding:2px 6px;
+border-radius:4px;
+}
+pre{
+background:#eef2f5;
+padding:16px;
+border-radius:8px;
+overflow-x:auto;
+}
+details{
+margin-top:18px;
+background:#f8fafc;
+border:1px solid #dbe4ea;
+border-radius:8px;
+padding:12px 16px;
+}
+summary{
+cursor:pointer;
+font-weight:bold;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+}
+th, td{
+border:1px solid #dbe4ea;
+padding:8px;
+text-align:left;
+vertical-align:top;
+}
+th{
+background:#eef2f5;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<p><a href="../index.html">← Back to Main Portfolio</a></p>
+<div class="card">
+<h1>main.py</h1>
+
+<h2>Purpose</h2>
+<p>This file initializes the complete robot system and acts as the integration layer for all subsystems. It creates hardware interfaces, shared variables, task objects, and the cooperative scheduler.</p>
+
+<h2>Main Role</h2>
+<p>main.py is where the full robot is assembled. It imports the software modules, configures the hardware, creates the Shares and Queues used for inter-task communication, and starts the runtime scheduler.</p>
+
+<h2>Key Responsibilities</h2>
+<ul>
+<li>Initialize PWM, motor drivers, encoders, line sensor array, and I2C/IMU hardware</li>
+<li>Load stored line-sensor calibration data from line_calib.json when available</li>
+<li>Create Shares and Queues for motor control, line following, bump detection, IMU data, and observer states</li>
+<li>Instantiate all runtime tasks including motor, line-follow, IMU, observer-related shares, bump, course, and user interface tasks</li>
+<li>Append tasks to the cooperative scheduler with defined priorities and periods</li>
+<li>Run the scheduler continuously until interruption</li>
+</ul>
+
+<h2>Important Attributes / Shares / Variables</h2>
+<table>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td><code>pwm_tim</code></td><td>20 kHz PWM timer used by the motor drivers</td></tr>
+<tr><td><code>leftMotor / rightMotor</code></td><td>Motor-driver objects for the left and right wheels</td></tr>
+<tr><td><code>leftEncoder / rightEncoder</code></td><td>Encoder objects used for wheel position and velocity feedback</td></tr>
+<tr><td><code>line_sensors</code></td><td>LineSensorArray object used for reflectance sensing</td></tr>
+<tr><td><code>imu</code></td><td>BNO055 IMU object connected through I2C</td></tr>
+<tr><td><code>leftMotorGo / rightMotorGo</code></td><td>Boolean Shares that enable or disable motor tasks</td></tr>
+<tr><td><code>velSetpoint_L / velSetpoint_R</code></td><td>Wheel velocity command Shares</td></tr>
+<tr><td><code>KpShare / KiShare</code></td><td>PI gain Shares used by the motor tasks</td></tr>
+<tr><td><code>vBaseShare</code></td><td>Base speed Share for line following</td></tr>
+<tr><td><code>lfEnableShare</code></td><td>Boolean Share enabling line-follow control</td></tr>
+<tr><td><code>courseEnableShare</code></td><td>Boolean Share enabling the full obstacle-course FSM</td></tr>
+<tr><td><code>bumpEventShare</code></td><td>Boolean Share indicating bump-switch contact</td></tr>
+<tr><td><code>psi_meas / psiDot_meas</code></td><td>Measured heading and yaw-rate Shares from the IMU</td></tr>
+<tr><td><code>s_hat / psi_hat / wL_hat / wR_hat</code></td><td>Observer-estimated state Shares</td></tr>
+</table>
+
+<details>
+<summary>Click to view representative logic</summary>
+<pre><code>pwm_tim = Timer(3, freq=20000)
+leftMotor  = motor_driver(Pin.cpu.B1, Pin.cpu.B15, Pin.cpu.B14, pwm_tim, 4)
+rightMotor = motor_driver(Pin.cpu.B0, Pin.cpu.B5,  Pin.cpu.B4,  pwm_tim, 3)
+
+leftMotorGo  = Share(&quot;b&quot;, name=&quot;Left Mot Go&quot;)
+rightMotorGo = Share(&quot;b&quot;, name=&quot;Right Mot Go&quot;)
+velSetpoint_L = Share(&quot;f&quot;, name=&quot;Vel Set L&quot;)
+velSetpoint_R = Share(&quot;f&quot;, name=&quot;Vel Set R&quot;)</code></pre>
+</details>
+
+<h2>Why This File Matters</h2>
+<p>This file matters because it transforms a collection of independent modules into one functioning robot. Without it, the individual controllers, sensors, and event handlers would never operate as one integrated system.</p>
+
+<p><a href="../main.py" target="_blank">Open raw main.py file</a></p>
+</div>
+</div>
+</body>
+</html>

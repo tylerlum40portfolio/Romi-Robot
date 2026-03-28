@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>task_user.py Documentation</title>
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f8;
+color:#333;
+line-height:1.7;
+}
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+.card{
+background:white;
+padding:28px;
+border-radius:10px;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+h1,h2,h3{
+color:#1f2933;
+}
+a{
+color:#1f5fbf;
+text-decoration:none;
+font-weight:bold;
+}
+a:hover{
+text-decoration:underline;
+}
+code{
+background:#eef2f5;
+padding:2px 6px;
+border-radius:4px;
+}
+pre{
+background:#eef2f5;
+padding:16px;
+border-radius:8px;
+overflow-x:auto;
+}
+details{
+margin-top:18px;
+background:#f8fafc;
+border:1px solid #dbe4ea;
+border-radius:8px;
+padding:12px 16px;
+}
+summary{
+cursor:pointer;
+font-weight:bold;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:12px;
+}
+th, td{
+border:1px solid #dbe4ea;
+padding:8px;
+text-align:left;
+vertical-align:top;
+}
+th{
+background:#eef2f5;
+}
+ul{
+padding-left:24px;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<p><a href="../index.html">← Back to Main Portfolio</a></p>
+<div class="card">
+<h1>task_user.py</h1>
+
+<h2>Purpose</h2>
+<p>
+This file implements the serial user-interface task. It inherits command-handling behavior from <code>UserCmds</code> and provides the live runtime interface used for tuning gains, calibrating sensors, printing diagnostic values, starting or stopping line-follow mode, and controlling estimator streaming.
+</p>
+<h2>Main Role</h2>
+<p>
+This task is the main human-facing interface to the robot. It makes the robot much easier to test and tune because many settings can be changed at runtime rather than by repeatedly editing code.
+</p>
+<h2>Key Responsibilities</h2>
+<ul>
+<li>Open and manage the USB serial interface</li>
+<li>Display help text and prompts</li>
+<li>Read characters entered by the user</li>
+<li>Dispatch commands through the command helper layer</li>
+<li>Collect and display logged data when requested</li>
+<li>Expose line-follow, IMU, estimator, and control-related commands</li>
+</ul>
+<h2>Important Attributes / Shares / Variables</h2>
+<table>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td><code>_ser</code></td><td>USB serial interface object used for user interaction.</td></tr>
+<tr><td><code>_leftMotorGo</code>, <code>_rightMotorGo</code></td><td>Shares used to control motor enable from the UI.</td></tr>
+<tr><td><code>_Kp</code>, <code>_Ki</code></td><td>Gain Shares edited through the UI.</td></tr>
+<tr><td><code>_vBase</code></td><td>Line-follow base speed Share.</td></tr>
+<tr><td><code>_lfEnable</code></td><td>Share used to toggle line-follow mode.</td></tr>
+<tr><td><code>_estStreamEnable</code></td><td>Share used to enable observer streaming.</td></tr>
+<tr><td><code>_sens</code></td><td>Line sensor object used for calibration and printout commands.</td></tr>
+<tr><td><code>_imu</code></td><td>IMU object used for calibration and IMU printout commands.</td></tr>
+<tr><td><code>_courseEnable</code></td><td>Share used to start or stop the full course task.</td></tr>
+<tr><td><code>_buf</code>, <code>_mode</code>, <code>_num_str</code></td><td>Internal state used while collecting typed user input.</td></tr>
+</table>
+<h2>Task States</h2>
+<table>
+<tr><th>State</th><th>Description</th></tr>
+<tr><td><code>S0_INIT</code></td><td>Prints the help menu and prompt at startup.</td></tr>
+<tr><td><code>S1_CMD</code></td><td>Waits for user commands.</td></tr>
+<tr><td><code>S2_GET</code></td><td>Collects multi-character numeric input.</td></tr>
+<tr><td><code>S3_COL</code></td><td>Waits until log queues are ready to dump data.</td></tr>
+<tr><td><code>S4_DIS</code></td><td>Displays buffered data over the serial interface.</td></tr>
+</table>
+<h2>Why This File Matters</h2>
+<p>
+This file made the full development process dramatically easier by turning many tuning and diagnostic tasks into serial commands rather than manual source edits. It is one of the most practical files in the project.
+</p>
+<p><a href="../task_user.py" target="_blank">Open raw task_user.py file</a></p>
+
+</div>
+</div>
+</body>
+</html>
