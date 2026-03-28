@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romi Robot Project Portfolio</title>
+
+<style>
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f4f6f8;
+color:#333;
+line-height:1.7;
+}
+
+header{
+background:#1f2933;
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:46px;
+margin-bottom:12px;
+}
+
+header p{
+font-size:18px;
+max-width:900px;
+margin:auto;
+opacity:0.92;
+}
+
+nav{
+background:#111;
+padding:14px 10px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:0 14px;
+text-decoration:none;
+font-weight:bold;
+font-size:15px;
+}
+
+nav a:hover{
+color:#4da3ff;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+section{
+margin-bottom:60px;
+}
+
+section h2{
+border-bottom:3px solid #4da3ff;
+display:inline-block;
+padding-bottom:5px;
+margin-bottom:20px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:10px;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+overflow-x:auto;
+}
+
+.card h3{
+margin-top:28px;
+margin-bottom:10px;
+color:#1f2933;
+}
+
+.card h4{
+margin-top:18px;
+margin-bottom:8px;
+color:#1f2933;
+}
+
+ul, ol{
+padding-left:24px;
+}
+
+li{
+margin-bottom:10px;
+}
+
+.figure-row{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+margin-top:20px;
+}
+
+.figure-row img{
+width:100%;
+max-width:500px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.figure{
+margin-top:20px;
+}
+
+.figure img{
+width:100%;
+max-width:700px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+display:block;
+}
+
+.figure-caption{
+font-size:15px;
+color:#555;
+margin-top:8px;
+font-style:italic;
+}
+
+.figure-placeholder{
+margin:18px 0;
+padding:18px;
+background:#eef2f5;
+border-left:4px solid #4da3ff;
+border-radius:6px;
+}
+
+code{
+background:#eef2f5;
+padding:2px 6px;
+border-radius:4px;
+}
+
+pre{
+background:#eef2f5;
+padding:16px;
+border-radius:8px;
+overflow-x:auto;
+}
+
+iframe{
+width:100%;
+max-width:800px;
+height:450px;
+border:none;
+border-radius:8px;
+}
+
+details{
+margin-top:16px;
+background:#f8fafc;
+border:1px solid #dbe4ea;
+border-radius:8px;
+padding:12px 16px;
+}
+
+summary{
+cursor:pointer;
+font-weight:bold;
+color:#1f2933;
+}
+
+footer{
+background:#1f2933;
+color:white;
+text-align:center;
+padding:24px;
+margin-top:40px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:16px;
+background:white;
+table-layout:fixed;
+}
+
+th, td{
+border:1px solid #dbe4ea;
+padding:10px 12px;
+text-align:left;
+vertical-align:top;
+overflow-wrap:break-word;
+word-wrap:break-word;
+}
+
+th{
+background:#eef6ff;
+color:#1f2933;
+}
+
+.file-links{
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+margin-top:16px;
+}
+
+.file-links a,
+.button-link,
+.repo-button{
+display:inline-block;
+padding:10px 14px;
+background:#e8f1ff;
+border-radius:6px;
+text-decoration:none;
+color:#1f2933;
+font-weight:bold;
+transition:0.2s ease;
+}
+
+.file-links a:hover,
+.button-link:hover,
+.repo-button:hover{
+background:#d4e7ff;
+transform:translateY(-2px);
+}
+
+.table-note{
+margin-top:12px;
+font-size:15px;
+color:#555;
+}
+
+.two-col-table td:first-child,
+.two-col-table th:first-child{
+width:40%;
+font-weight:bold;
+}
+
+.wide-table{
+font-size:15px;
+}
+
+.doc-button{
+display:inline-block;
+padding:4px 10px;
+margin-right:6px;
+background:#e8f1ff;
+border-radius:6px;
+text-decoration:none;
+font-family: monospace;
+font-size:14px;
+color:#1f2933;
+transition:0.2s ease;
+}
+
+.doc-button:hover{
+background:#d4e7ff;
+transform:translateY(-1px);
+}
+
+.repo-button {
+  display:inline-block;
+  padding:10px 14px;
+  background:#e8f1ff;
+  border-radius:6px;
+  text-decoration:none;
+  color:#1f2933 !important;
+  font-weight:bold;
+}
+
+.repo-button:link,
+.repo-button:visited,
+.repo-button:hover,
+.repo-button:active {
+  color:#1f2933;
+}
+  
+.prefix{
+color:#1f2933;
+font-weight:700;
+}
+
+.name{
+color:#1f2933;
+font-weight:700;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Autonomous Romi Robot Project</h1>
+<p>
+Project portfolio by Tyler Lum and Michael Milner documenting the design, implementation, and testing of an autonomous Romi robot developed to complete a multi-stage obstacle course using line sensors, encoders, bump switches, an IMU, and observer-based state estimation.
+</p>
+</header>
+
+<nav>
+<a href="#overview">Overview</a>
+<a href="#objectives">Objectives</a>
+<a href="#parameters">Parameters</a>
+<a href="#build">Build Guide</a>
+<a href="#wiring">Wiring</a>
+<a href="#design">Design</a>
+<a href="#analysis">Analysis</a>
+<a href="#implementation">Implementation</a>
+<a href="#code">Code Architecture</a>
+<a href="#docs">Detailed Docs</a>
+<a href="#diagrams">System Diagrams</a>
+<a href="#results">Results</a>
+<a href="#media">Media</a>
+<a href="#video">Video</a>
+<a href="#repository">Repository</a>
+<a href="#external">External Reference</a>
+</nav>
+
+<div class="container">
+
+<section id="overview">
+<h2>Project Overview</h2>
+<div class="card">
+
+<p>
+This project focused on the design and implementation of an autonomous Romi robot capable of completing a structured obstacle course without direct human control. The goal was not just to make the robot move, but to build a system that could sense its environment, interpret what was happening, and respond in a reliable and repeatable way.
+</p>
+
+<p>
+To accomplish this, the robot combines mechanical design, embedded systems, sensor integration, and control algorithms. The final system uses a reflectance sensor array to detect and follow a printed line, wheel encoders to measure wheel motion, front-mounted bump switches to detect wall contact, and an inertial measurement unit (IMU) to measure heading and angular velocity. These measurements are combined in software using both direct feedback control and a discrete-time observer.
+</p>
+
+<p>
+One of the most important parts of this project was the software structure. Rather than writing one large control loop, the robot was organized into multiple cooperating tasks. Separate tasks were used for motor control, line following, IMU processing, observer estimation, bump detection, garbage collection, and user interaction. This made the system easier to debug, easier to expand, and much closer to how a real embedded robotic system is structured.
+</p>
+
+<p>
+A major theme throughout the project was balancing theory with real-world behavior. On paper, encoder counts, heading measurements, and controller equations can look straightforward. In practice, sensor noise, timing, actuator mismatch, and memory limits all affect performance. This project ended up being a strong lesson in how important integration, tuning, and iteration are when building an actual autonomous system.
+</p>
+
+</div>
+</section>
+
+<section id="objectives">
+<h2>Project Objectives</h2>
+<div class="card">
+
+<p>
+The main objective of this project was to develop a robot that could complete the required obstacle course autonomously while demonstrating good engineering design, not just isolated functionality. That meant the robot needed to complete multiple behaviors in sequence and transition between them in a predictable way.
+</p>
+
+<h3>Primary Functional Goals</h3>
+<ul>
+<li>Detect and follow a line on the course using reflectance-based sensing</li>
+<li>Maintain stable and repeatable wheel motion using encoder feedback</li>
+<li>Execute controlled state transitions between navigation behaviors</li>
+<li>Detect contact with an obstacle using bump switches</li>
+<li>Stop or change behavior safely when a collision occurs</li>
+<li>Use IMU and encoder data to improve awareness of robot motion</li>
+<li>Support live tuning, calibration, and debugging through a serial user interface</li>
+</ul>
+
+<h3>Higher-Level Engineering Goals</h3>
+<ul>
+<li>Use a modular software architecture instead of a monolithic loop</li>
+<li>Implement closed-loop control rather than relying only on timing</li>
+<li>Incorporate state estimation to go beyond raw sensor readings</li>
+<li>Design the system to be understandable and reproducible by another student</li>
+<li>Create a documented portfolio that explains not only what was built, but why it was built that way</li>
+</ul>
+
+<p>
+In the end, the goal of the project was not only to produce a functioning robot, but to demonstrate a full engineering process: system design, implementation, testing, debugging, and reflection.
+</p>
+
+</div>
+</section>
+
+<section id="parameters">
+<h2>Romi Platform Parameters</h2>
+<div class="card">
+
+<p>
+Before implementing the final robot behaviors, it was important to understand the underlying Romi platform and the physical parameters that affect motion, sensing, and control. The Romi chassis uses a differential-drive layout, meaning motion is generated by independently controlling the two wheel speeds. Key geometric and encoder parameters directly influence distance resolution, turning behavior, and observer modeling.
+</p>
+
+<table class="two-col-table">
+<tr>
+  <th>Parameter</th>
+  <th>Value</th>
+</tr>
+<tr>
+  <td>Chassis Diameter</td>
+  <td>165 mm</td>
+</tr>
+<tr>
+  <td>Track Width (wheel center to wheel center)</td>
+  <td>141 mm</td>
+</tr>
+<tr>
+  <td>Wheel Radius</td>
+  <td>35 mm</td>
+</tr>
+<tr>
+  <td>Wheel Circumference</td>
+  <td>219.911 mm</td>
+</tr>
+<tr>
+  <td>Gear Ratio</td>
+  <td>120:1</td>
+</tr>
+<tr>
+  <td>Encoder Resolution at Motor</td>
+  <td>12 counts/rev</td>
+</tr>
+<tr>
+  <td>Effective Encoder Resolution</td>
+  <td>1440 counts/rev</td>
+</tr>
+<tr>
+  <td>Rated Motor Voltage</td>
+  <td>4.5 V</td>
+</tr>
+<tr>
+  <td>Motor Stall Torque</td>
+  <td>25 oz-in (approximately 0.1765 N·m)</td>
+</tr>
+<tr>
+  <td>Motor Stall Current</td>
+  <td>1.25 A</td>
+</tr>
+<tr>
+  <td>No-Load Motor Speed</td>
+  <td>150 rpm at 4.5 V</td>
+</tr>
+<tr>
+  <td>Maximum Translational Speed</td>
+  <td>0.55 m/s</td>
+</tr>
+<tr>
+  <td>Theoretical Max Speed (6×AA NiMH, 7.2 V)</td>
+  <td>0.88 m/s</td>
+</tr>
+<tr>
+  <td>Theoretical Max Speed (6×AA Alkaline, 9.0 V)</td>
+  <td>1.10 m/s</td>
+</tr>
+<tr>
+  <td>Alkaline vs NiMH Speed Increase</td>
+  <td>25%</td>
+</tr>
+</table>
+
+<p class="table-note">
+These values were especially useful for estimating encoder distance resolution, expected robot speed, and the scale of the physical model used in the observer.
+</p>
+
+<h3>Why These Parameters Matter</h3>
+<p>
+Because each wheel revolution corresponds to 1440 encoder counts and the wheel circumference is about 0.2199 m, the robot can theoretically resolve straight-line travel on the order of 0.153 mm per encoder count. This gave the control and estimation software a solid measurement foundation, provided wheel slip remained limited.
+</p>
+
+<p>
+The Romi is also nonholonomic, meaning it cannot move sideways directly. Instead, all path changes must be generated by the relative speeds of the two wheels. That made wheel-speed regulation, heading estimation, and line-sensor feedback especially important in practice.
+</p>
+
+</div>
+</section>
+
+<section id="build">
+<h2>Build Guide</h2>
+<div class="card">
+
+<p>
+This section provides a step-by-step guide for assembling the Romi robot, including mechanical structure, electronics integration, and sensor installation. We wanted the build sequence to be straightforward enough that another student could follow it without having to undo major steps later.
+</p>
+
+<h3>1. Gather Materials and Tools</h3>
+<p>
+Before beginning assembly, verify that all required hardware components, cables, and tools are available. This includes standoffs, screws, the Romi chassis, Nucleo board, Shoe of Brian, IMU, and pre-crimped jumper wires. Having all components ready prevents interruptions during assembly.
+</p>
+
+<h3>2. Install Chassis Standoffs</h3>
+<p>
+Attach four 30 mm standoffs to the Romi chassis using nylon lock nuts. These standoffs form the vertical support for the electronics stack. Ensure they are aligned properly in the mounting slots and do not overtighten, as the plastic chassis can be damaged.
+</p>
+
+<h3>3. Prepare and Route Cables</h3>
+<p>
+Create and organize the required cable assemblies, including power, motor, and encoder cables. Follow proper color conventions and confirm pin orientations before connecting anything. Route the cables through the center of the chassis to simplify later connections.
+</p>
+
+<h3>4. Install Adapter Plate</h3>
+<p>
+Mount the Romi-to-Shoe adapter plate onto the standoffs using M2.5 screws. Feed motor and encoder wires through the center cutout to keep wiring clean and organized.
+</p>
+
+<h3>5. Mount Shoe of Brian and Nucleo</h3>
+<p>
+Install four 8 mm standoffs onto the adapter plate, then attach the Shoe of Brian using screws and nylon washers. Afterward, carefully mount the Nucleo L476RG onto the Shoe of Brian, ensuring proper alignment of the header pins.
+</p>
+
+<h3>6. Connect Power and Signals</h3>
+<p>
+Connect all cables from the Romi power distribution board to the Nucleo. This includes power, motor control signals, and encoder inputs. We treated this as one of the most important steps in the whole build because incorrect connections could damage the microcontroller immediately.
+</p>
+
+<h3>7. Install IMU</h3>
+<p>
+Mount the BNO055 IMU using standoffs and screws on the Romi chassis. Position it to avoid interference with other components and ensure stable orientation for accurate heading and angular velocity measurements.
+</p>
+
+<h3>8. Install Line Sensor</h3>
+<p>
+Mount the Pololu QTRX-A reflectance sensor array at the front of the robot using four 1/4" 2-56 MF standoffs, 2-56 screws, and nuts. This sensor detects the line by measuring reflected infrared light and enables real-time steering corrections.
+</p>
+
+<h3>9. Install Bump Sensors</h3>
+<p>
+Mount two snap-action bump switches with 18.5 mm lever arms at the front of the robot, positioned in front of the line sensor. These were secured using hot glue to the frame, which ended up being a simple and effective method for detecting wall contact during the obstacle course.
+</p>
+
+<h3>10. Final Checks</h3>
+<ul>
+<li>Verify all wiring connections and polarity</li>
+<li>Ensure no loose cables interfere with wheels</li>
+<li>Confirm sensors are securely mounted</li>
+<li>Only power on the system after all checks are complete</li>
+</ul>
+
+<p>
+Following this build sequence helped keep the robot assembly organized and made later debugging much easier.
+</p>
+
+</div>
+</section>
+
+<section id="wiring">
+<h2>Wiring Diagram and Pin Layout</h2>
+<div class="card">
+
+<p>
+Because this project integrated motors, encoders, line sensors, bump switches, and an IMU onto a single microcontroller, documenting the wiring clearly was an important part of the final package. A full wiring diagram was created so the robot could be debugged, understood, and reproduced more easily by another student or team.
+</p>
+
+<h3>Wiring Diagram</h3>
+<p>
+The full wiring diagram for the Romi robot electrical system is shown below.
+</p>
+
+<div class="figure">
+  <img src="images/images/wiring_diagram.png" alt="Romi robot wiring diagram">
+  <p class="figure-caption">Figure 1. Full wiring diagram showing MCU, motor, encoder, IMU, line sensor, and bump switch connections.</p>
+</div>
+
+<h3>Pin Layout Table</h3>
+<p>
+The table below summarizes the main electrical connections used in the final robot system based on the final wiring layout.
+</p>
+
+<table class="wide-table">
+<tr>
+  <th>Subsystem</th>
+  <th>Signal / Wire</th>
+  <th>Nucleo Pin</th>
+  <th>Notes</th>
+</tr>
+
+<tr>
+  <td>Romi PDB</td>
+  <td>GND (black)</td>
+  <td>GND</td>
+  <td>Common ground connection</td>
+</tr>
+<tr>
+  <td>Romi PDB</td>
+  <td>VSW (red)</td>
+  <td>Vin</td>
+  <td>Battery / switched supply path</td>
+</tr>
+
+<tr>
+  <td>Left Encoder</td>
+  <td>ELA (blue)</td>
+  <td>PA_8, PWM1/1</td>
+  <td>Timer encoder input</td>
+</tr>
+<tr>
+  <td>Left Encoder</td>
+  <td>ELB (yellow)</td>
+  <td>PA_9, PWM1/2</td>
+  <td>Timer encoder input</td>
+</tr>
+
+<tr>
+  <td>Right Encoder</td>
+  <td>ERA (blue)</td>
+  <td>PA_0, PWM2/1</td>
+  <td>Timer encoder input</td>
+</tr>
+<tr>
+  <td>Right Encoder</td>
+  <td>ERB (yellow)</td>
+  <td>PA_1, PWM2/2</td>
+  <td>Timer encoder input</td>
+</tr>
+
+<tr>
+  <td>Left Motor</td>
+  <td>PWM (green)</td>
+  <td>PB_1</td>
+  <td>Motor PWM command</td>
+</tr>
+<tr>
+  <td>Left Motor</td>
+  <td>DIR (yellow)</td>
+  <td>PB_15</td>
+  <td>Direction control</td>
+</tr>
+<tr>
+  <td>Left Motor</td>
+  <td>SLP (blue)</td>
+  <td>PB_14</td>
+  <td>Sleep / enable control</td>
+</tr>
+
+<tr>
+  <td>Right Motor</td>
+  <td>PWM (green)</td>
+  <td>PB_0</td>
+  <td>Motor PWM command</td>
+</tr>
+<tr>
+  <td>Right Motor</td>
+  <td>DIR (blue)</td>
+  <td>PB_5</td>
+  <td>Direction control</td>
+</tr>
+<tr>
+  <td>Right Motor</td>
+  <td>SLP (yellow)</td>
+  <td>PB_4</td>
+  <td>Sleep / enable control</td>
+</tr>
+
+<tr>
+  <td>IMU</td>
+  <td>3.3V (red)</td>
+  <td>3V3</td>
+  <td>Power</td>
+</tr>
+<tr>
+  <td>IMU</td>
+  <td>GND (black)</td>
+  <td>GND</td>
+  <td>Ground</td>
+</tr>
+<tr>
+  <td>IMU</td>
+  <td>Grey</td>
+  <td>PB9</td>
+  <td>I2C line</td>
+</tr>
+<tr>
+  <td>IMU</td>
+  <td>Purple</td>
+  <td>PB8</td>
+  <td>I2C line</td>
+</tr>
+<tr>
+  <td>IMU</td>
+  <td>White</td>
+  <td>PC9</td>
+  <td>Optional / auxiliary line</td>
+</tr>
+
+<tr>
+  <td>Bump Sensor (right)</td>
+  <td>COM</td>
+  <td>GND</td>
+  <td>Common terminal</td>
+</tr>
+<tr>
+  <td>Bump Sensor (right)</td>
+  <td>NO</td>
+  <td>PB7</td>
+  <td>Normally open input</td>
+</tr>
+
+<tr>
+  <td>Bump Sensor (left)</td>
+  <td>COM</td>
+  <td>GND</td>
+  <td>Common terminal</td>
+</tr>
+<tr>
+  <td>Bump Sensor (left)</td>
+  <td>NO</td>
+  <td>PB2</td>
+  <td>Normally open input</td>
+</tr>
+</table>
+
+<h3>Line Sensor Pin Mapping</h3>
+<table class="wide-table">
+<tr>
+  <th>Line Sensor Signal</th>
+  <th>Nucleo Pin</th>
+</tr>
+<tr><td>GND</td><td>GND (CN7)</td></tr>
+<tr><td>VCC</td><td>3V3 (CN6)</td></tr>
+<tr><td>CTRL</td><td>PC10</td></tr>
+<tr><td>1</td><td>PC0</td></tr>
+<tr><td>3</td><td>PC1</td></tr>
+<tr><td>5</td><td>PA5</td></tr>
+<tr><td>7</td><td>PA6</td></tr>
+<tr><td>9</td><td>PA7</td></tr>
+<tr><td>11</td><td>PC2</td></tr>
+<tr><td>13</td><td>PC5</td></tr>
+<tr><td>15</td><td>PC4</td></tr>
+</table>
+
+<p class="table-note">
+This table was included so that the physical robot and its software pin assignments can be cross-referenced more easily during debugging and future reproduction.
+</p>
+
+</div>
+</section>
+
+<section id="design">
+<h2>Mechanical &amp; Electrical Design</h2>
+<div class="card">
+
+<h3>Mechanical Design Overview</h3>
+
+<p>
+The robot is built on the Romi differential-drive chassis, which uses two independently driven wheels and a passive rear support. This configuration is simple, compact, and especially well suited for line-following and small navigation tasks because translational and rotational motion can be controlled through the relative wheel speeds.
+</p>
+
+<p>
+The mechanical design of this project was driven less by large custom structures and more by thoughtful sensor placement. Since the robot depends heavily on what it can sense, where the sensors are mounted has a direct effect on performance. The line sensor array, bump switches, and IMU were all positioned with a specific purpose in mind.
+</p>
+
+<h3>Line Sensor Placement</h3>
+
+<p>
+The primary line-detection hardware is a Pololu QTRX-A reflectance sensor array mounted underneath the front portion of the robot. This array was placed forward of the wheel axis so the robot can “see” the line before the center of the chassis passes over it. That matters because it gives the controller more time to react. If the line sensor were directly under the center of the robot, the steering correction would happen later and the robot would be more likely to overshoot or oscillate.
+</p>
+
+<p>
+Keeping the array low and level relative to the course surface was also important. Reflectance sensors are sensitive to height, so any tilt or uneven mounting can change the magnitude of the readings. A stable mounting position helps the calibration stay meaningful and improves consistency from run to run.
+</p>
+
+<h3>Bump Sensor Placement</h3>
+
+<p>
+The robot uses two Pololu snap-action switches with bump levers mounted at the front of the chassis. These act as physical contact sensors. The reason this was a good choice for the obstacle portion of the course is that the required behavior was based on actual impact with a wall, not simply detecting something nearby. A mechanical switch provides a clear and unambiguous signal: either contact happened or it did not.
+</p>
+
+<p>
+The front-facing placement also increases reliability. Since both switches are near the forward edge of the robot, wall contact is detected immediately when the robot reaches the obstacle. Using two switches also improves robustness in cases where the robot approaches slightly off-center.
+</p>
+
+<h3>IMU Placement</h3>
+
+<p>
+The BNO055 IMU was mounted near the center of the robot. This location was chosen to reduce the effect of rotational offset and vibration on the measured signals. Since the IMU is used to estimate heading and yaw rate, placing it near the center of rotation makes those readings more representative of the robot as a whole.
+</p>
+
+<p>
+Although the line sensors and encoders do most of the direct navigation work, the IMU adds another layer of information about how the robot is moving. That made it valuable not only for real-time use, but also for debugging and analyzing the robot’s dynamic behavior during turns.
+</p>
+
+<h3>Sensors Used</h3>
+
+<ul>
+<li><b>Pololu QTRX-A reflectance sensor array:</b> used for line detection by measuring changes in reflected infrared light</li>
+<li><b>Snap-action bump switches:</b> used for wall and collision detection through direct physical contact</li>
+<li><b>Wheel encoders:</b> used for position and velocity feedback from each motor</li>
+<li><b>BNO055 IMU:</b> used to measure heading and yaw rate</li>
+</ul>
+
+<h3>Electrical Design</h3>
+
+<p>
+The electrical system is centered around an STM32 microcontroller running MicroPython. The microcontroller interfaces with several kinds of hardware at once, each with different signal requirements.
+</p>
+
+<ul>
+<li><b>PWM outputs</b> are used to command the motor drivers</li>
+<li><b>Encoder timer inputs</b> are used to measure wheel rotation</li>
+<li><b>ADC inputs</b> are used to read the analog reflectance sensors</li>
+<li><b>I2C communication</b> is used for the BNO055 IMU</li>
+<li><b>Digital inputs with pull-ups</b> are used for the bump switches</li>
+</ul>
+
+<p>
+The bump switches are configured so that they normally read HIGH and transition to LOW when pressed. This makes them easy to handle in software because the code can detect the falling edge and immediately trigger a stop condition. The line sensor emitter is also controlled directly in software, which allows the system to manage the reflectance readings in a more controlled way.
+</p>
+
+<p>
+Overall, the electrical design was aimed at reliability and clarity. A robot like this is only as good as its sensing and actuation pathways, so making sure the hardware connections were stable and logically organized was just as important as the code itself. As part of the final documentation package, we also created a full wiring diagram for the robot so that the system could be more easily understood, debugged, and reproduced by another student or project team.
+</p>
+
+<p>
+For reproducibility, the repository includes the source code, the portfolio site, documentation pages, the wiring diagram, calibration files, and supporting media. Our project did not rely on large custom-manufactured parts, but we did document the mounting approach, sensor placement, hardware stackup, and wiring so that the robot could be rebuilt with standard hardware and the same electrical layout.
+</p>
+
+<div class="figure">
+  <img src="/Romi_Lebron.github.io/images/images/IMG_4284.jpeg" alt="Full assembled Romi robot">
+  <p class="figure-caption">Figure 2. Fully assembled Romi robot showing the final integrated hardware layout.</p>
+</div>
+
+</div>
+</section>
+
+<section id="analysis">
+<h2>Representative Plots and Tuning Results</h2>
+<div class="card">
+
+<p>
+In addition to the final demonstration, we included a few representative plots from testing and tuning. These helped us understand how the robot was behaving in real time and allowed us to make more informed adjustments instead of relying on trial-and-error.
+</p>
+
+<!-- ===================== PLOT 1 ===================== -->
+<h3>Line-Follow Centroid Behavior</h3>
+
+<p>
+This plot shows the weighted centroid signal used by the line-follow controller over time. The centroid represents where the robot “thinks” the line is relative to its center. When the values stay near the desired range, the robot is tracking the line well. Larger deviations indicate moments where the robot drifted, encountered curvature, or had to correct its path. This plot was especially useful for tuning base speed and controller gains while also revealing how much noise was present in the sensor readings.
+</p>
+
+<div class="figure">
+  <img src="images/images/line following centorid graph.png" alt="Line-follow centroid plot">
+  <p class="figure-caption">
+    Figure 3. Line-follow centroid over time during a representative run.
+  </p>
+</div>
+
+<!-- ===================== PLOT 2 ===================== -->
+<h3>State Estimator Path Reconstruction</h3>
+
+<p>
+This plot shows the estimated x-y trajectory of the robot based on the state estimator. Instead of just reacting to sensor inputs, the robot continuously estimated its position using encoder and IMU data. The shape of the path gives a visual sense of how the robot moved through the course and whether the estimator was producing reasonable results. While some drift is expected without absolute position feedback, the overall motion trends helped validate the observer design.
+</p>
+
+<div class="figure">
+  <img src="images/images/state estimator.png" alt="Estimator x-y path plot">
+  <p class="figure-caption">
+    Figure 4. Estimated x-y path reconstructed from the state estimator.
+  </p>
+</div>
+
+<!-- ===================== PLOT 3 ===================== -->
+<h3>Motor Velocity Step Response</h3>
+
+<p>
+This plot shows the closed-loop response of the motor velocity controller to a step input. It was used to tune the PI controller gains by observing overshoot, settling time, and steady-state behavior. A well-tuned response reaches the desired speed quickly without excessive oscillation. This confirmed that the motor control was operating in closed-loop and that improvements were based on measured system performance rather than guesswork.
+</p>
+
+<div class="figure">
+  <img src="images/images/gain control.png" alt="Motor velocity step response plot">
+  <p class="figure-caption">
+    Figure 5. Closed-loop motor step response used for PI tuning.
+  </p>
+</div>
+
+</div>
+</section>
+  
+<section id="implementation">
+<h2>Software Implementation</h2>
+<div class="card">
+<h3>Architecture and Scheduling</h3>
+
+<p>
+The software is organized as a cooperative multitasking system. Instead of trying to run everything inside one giant while loop, the project uses individual tasks that are scheduled periodically. This makes the overall system much easier to reason about and debug, because each task has a clear purpose and a bounded responsibility.
+</p>
+
+<p>
+The scheduling infrastructure is based on generator-style tasks that yield control back to the scheduler after each run. The task framework also supports task priorities, timing periods, and profiling. In the final system, the bump task runs at the highest priority and a 5 ms period, the motor tasks also run every 5 ms, the line-follow task runs every 10 ms, and the IMU, observer, and user interface tasks run every 20 ms. Garbage collection runs in the background on a slower 100 ms schedule.
+</p>
+
+<h3>Shared Variables and Queues</h3>
+
+<p>
+Because the system is split into multiple tasks, data has to move safely between them. That is handled through Shares and Queues. Shares are used for single live values such as motor enable flags, velocity setpoints, measured states, and estimated observer states. Queues are used for buffered logging and time histories. This makes the communication between tasks organized and much safer than directly letting multiple pieces of code overwrite each other’s variables.
+</p>
+
+<h3>Main Program Structure</h3>
+
+<p>
+The main program initializes the motor drivers, encoder timers, line sensor array, IMU, serial interface, Shares, and Queues. It then creates the major tasks and adds them to the scheduler. In practical terms, the main file acts like the system integration layer: it does not contain all the control logic itself, but it instantiates all of the modules that together make the robot operate.
+</p>
+
+<h3>Motor Control</h3>
+
+<p>
+Each motor is controlled by its own task. The motor task uses encoder feedback and PI control to regulate wheel motion. It also computes and publishes useful values for other parts of the system, including motor input voltage and wheel displacement in meters. One especially useful implementation detail is that encoder updates continue even when the motor is not actively commanded to move, so the observer still has current displacement information available.
+</p>
+
+<p>
+The PI control approach works by comparing the desired wheel velocity to the measured velocity and then using proportional and integral action to reduce the error. This helps the robot maintain more consistent motion even when the motors are imperfect or the battery voltage varies.
+</p>
+
+<h3>Line Following</h3>
+
+<p>
+The line-following algorithm uses a centroid-based method. The sensor array readings are normalized, and the system computes the effective line position across the width of the sensor array. That position becomes the error signal for the line-follow controller.
+</p>
+
+<p>
+The line-follow task uses proportional, integral, and derivative terms to compute a steering correction. The controller then modifies the left and right wheel velocity commands relative to a base speed. In other words, the robot does not simply “turn left” or “turn right” in a binary way; it continuously adjusts its wheel commands to stay centered on the line. The implementation also includes smoothing, deadband behavior, and logic for weak line signals so that the robot does not instantly spin when the line becomes temporarily unclear.
+</p>
+
+<h3>IMU Task</h3>
+
+<p>
+The IMU task is responsible for reading heading and yaw rate from the BNO055 and publishing those values for use elsewhere in the system. One subtle but important part of this implementation is that heading is unwrapped. Since headings naturally jump from 359 degrees back to 0 degrees, using the raw wrapped angle can create artificial discontinuities. The IMU task avoids that problem by maintaining a continuous representation of heading.
+</p>
+
+<p>
+The IMU task also supports a non-blocking calibration flow. Through the user interface, the system can request calibration, attempt to load saved calibration values, wait for sufficient sensor calibration, and then save the updated calibration to a file. This made the robot much more practical to operate and re-use between runs. The task also includes filtering and spike rejection to keep unrealistic yaw-rate values from corrupting the measurements.
+</p>
+
+<h3>Observer and State Estimation</h3>
+
+<p>
+One of the strongest parts of this project is the observer-based state estimation. Instead of relying purely on raw measurements, the robot uses an observer task that combines motor inputs, encoder-based displacement measurements, and IMU data to estimate the internal state of the system.
+</p>
+
+<p>
+The estimated states include:
+</p>
+
+<ul>
+<li>Forward position, <code>s</code></li>
+<li>Heading, <code>ψ</code></li>
+<li>Left wheel speed, <code>ωL</code></li>
+<li>Right wheel speed, <code>ωR</code></li>
+</ul>
+
+<p>
+The observer runs at 20 ms and uses matrices defined in <code>observer_matrices.py</code>. The uploaded matrices show a discrete-time model with a sample time of 0.02 s and a 4-state formulation. The file comments also show the physical parameters used in the model, including wheel radius and wheelbase-related terms. That means this is not just a conceptual observer; it is grounded in the physical robot model.
+</p>
+
+<p>
+From a portfolio standpoint, this matters a lot because it shows that the project goes beyond basic line following. The robot is not just reacting directly to sensor values; it is estimating its motion using a state-space framework. That is a much more advanced approach and demonstrates a strong connection between lecture theory and real implementation.
+</p>
+
+<h3>Bump Detection and Safety Behavior</h3>
+
+<p>
+The bump task continuously monitors the two front switches. It uses edge detection to identify a new press event, and when either bump switch transitions from unpressed to pressed, the task immediately disables both motors and disables line following. This was a good design choice because it made the collision response decisive and easy to understand. Rather than letting multiple tasks argue over what to do after impact, the bump task forces the system into a safe state as soon as contact is detected.
+</p>
+
+<h3>User Interface and Debugging Tools</h3>
+
+<p>
+The user interface task is another major strength of the project. Through the serial interface, the user can print the help menu, update gains, set the line-follow base speed, calibrate the line sensors on white and black surfaces, print sensor data, start line following, stop the system, trigger IMU calibration, save calibration data, and inspect observer values. This made testing and debugging much more efficient, because it removed the need to constantly hard-code parameters during development.
+</p>
+
+<h3> Reflection on the Software</h3>
+
+<p>
+One of the biggest lessons from the software side of this project was how much easier it is to manage a complicated robot when the code is modular. At first, it is tempting to write everything in one place because it feels faster. But once multiple sensors and behaviors are involved, that approach becomes hard to maintain very quickly. Splitting the system into tasks made the code cleaner, but more importantly, it made the robot easier to understand during debugging.
+</p>
+
+<p>
+We also found that the hardest part of the project was not getting one subsystem to work by itself. The hardest part was getting everything to work together consistently on the actual robot. A lot of what looked straightforward in theory still needed tuning, testing, and a lot of iteration once the whole system was running at the same time.
+</p>
+
+<details>
+<summary>Click to view a simplified software flow</summary>
+<p>
+Line Sensor → <code>task_line.py</code> → velocity commands → <code>task_motor.py</code> → motor driver → wheels
+</p>
+<p>
+Encoders + IMU → <code>task_observer.py</code> → estimated state variables
+</p>
+<p>
+Bump switches → <code>task_bump.py</code> → stop condition and safety response
+</p>
+</details>
+
+</div>
+</section>
+
+<section id="code">
+<h2>Code Architecture and File-by-File Implementation</h2>
+<div class="card">
+
+<p>
+One of the biggest goals of this project was to keep the software organized in a way that made the robot easier to test, debug, and improve over time. Instead of writing one large script that handled everything at once, the code was broken into multiple files with clearly defined roles. This made the system much more manageable, especially once the project grew to include line sensing, motor control, bump detection, IMU processing, observer estimation, logging, and a user interface.
+</p>
+
+<p>
+At a high level, the software is built around a cooperative multitasking architecture. The <code>main.py</code> file initializes the hardware, creates the task objects, allocates shared variables and queues, and registers everything with the scheduler. Each task then runs periodically and focuses on one specific job, such as controlling a motor, reading the IMU, following the line, or handling bump events. This structure made the project feel much more like a real embedded robotic system rather than a collection of disconnected lab scripts.
+</p>
+
+<h3>Main Integration File</h3>
+
+<h4><code>main.py</code></h4>
+<p>
+The main file is the center of the entire project. It initializes the PWM timer for the motors, configures two encoder timers, creates the line sensor array, starts I2C communication for the BNO055 IMU, and sets up a shared UART channel for estimator streaming. It also creates all of the Shares and Queues used by the tasks, including motor enable flags, line-follow setpoints, observer values, IMU values, and logging buffers. After that, it instantiates the task objects and adds them to the scheduler. In other words, <code>main.py</code> is the system integration layer that ties the whole robot together.
+</p>
+
+<h3>Task Files</h3>
+
+<p>
+The task files are the heart of the robot behavior. Each one is responsible for a specific subsystem and is designed to run repeatedly under the cooperative scheduler.
+</p>
+
+<h4><code>task_motor.py</code></h4>
+<p>
+This file implements the motor-control task for each wheel. It combines encoder updates with PI velocity control and also publishes useful observer signals such as motor input voltage and wheel displacement in meters. One especially good design choice in this file is that encoder position continues to update even when the motor is not actively being commanded to run. That means the observer can still track wheel displacement if the robot is moved by hand or if the control state changes. Overall, this file handles the low-level closed-loop actuation that makes the rest of the robot possible.
+</p>
+
+<h4><code>task_line.py</code></h4>
+<p>
+This file contains the line-following outer-loop controller. It uses a centroid-based line detection method and writes left and right velocity setpoints whenever line following is enabled. The task uses proportional, integral, and derivative terms and includes several practical improvements for weak line signals, such as a smaller denominator floor, realistic confidence thresholds, and logic to hold the last valid position when the line signal becomes poor instead of immediately commanding an aggressive spin.
+</p>
+
+<h4><code>task_imu.py</code></h4>
+<p>
+This file is responsible for acquiring and conditioning the IMU measurements. It reads heading and yaw rate from the BNO055, converts values into useful forms, and publishes them to Shares for use by the rest of the system. Its most important features include heading unwrapping, filtering, spike rejection, calibration loading, and calibration saving.
+</p>
+
+<h4><code>task_observer.py</code></h4>
+<p>
+This file implements the observer task. It takes in motor voltages, measured wheel displacements, heading, and yaw rate, and uses a discrete-time state-space model to estimate the robot state. This is one of the strongest technical features of the entire project because it connects the final implementation directly to controls theory and state estimation.
+</p>
+
+<h4><code>task_bump.py</code></h4>
+<p>
+This file handles collision detection using the left and right snap-action bump switches. It uses edge detection to identify a new press event and immediately disables the motors and line-following mode when contact occurs.
+</p>
+
+<h4><code>task_user.py</code></h4>
+<p>
+This file implements the serial user interface. It allows real-time parameter tuning, sensor calibration, command entry, and observer inspection, which made debugging and iteration much faster.
+</p>
+
+<h4><code>task_log_est.py</code></h4>
+<p>
+This file logs observer estimates over time and computes x-y dead-reckoned position for analysis. It is especially useful for validating the observer and examining robot motion outside the live demo.
+</p>
+
+<h4><code>task_garbage.py</code></h4>
+<p>
+This file periodically runs garbage collection in the background. Even though it is simple, it plays a practical role by helping manage memory on the microcontroller.
+</p>
+
+<h3>Hardware Interface and Driver Classes</h3>
+
+<h4><code>motor_driver.py</code></h4>
+<p>
+This file defines the motor driver class and abstracts the PWM, direction, and enable logic used to command the motors.
+</p>
+
+<h4><code>encoder.py</code></h4>
+<p>
+This file defines the encoder class used to read cumulative wheel position and velocity. It also handles timer overflow and timing calculations.
+</p>
+
+<h4><code>line_sensor.py</code></h4>
+<p>
+This file defines the <code>LineSensorArray</code> class. It manages ADC reads, emitter control, oversampling, ambient cancellation, and white/black calibration for the Pololu line sensor array.
+</p>
+
+<h4><code>driver.py</code></h4>
+<p>
+This file contains the low-level BNO055 IMU driver. It handles I2C communication, chip identification, mode setting, raw sensor reads, and calibration data handling.
+</p>
+
+<h3>Task Infrastructure Files</h3>
+
+<h4><code>task_share.py</code></h4>
+<p>
+This file provides the shared-data infrastructure used throughout the project. It defines Shares and Queues, which are essential for clean communication between the tasks.
+</p>
+
+<h4><code>cotask.py</code></h4>
+<p>
+This file implements the cooperative scheduler itself. It defines the task objects, run timing behavior, priorities, and profiling support that make the multitasking system possible.
+</p>
+
+<h3>Modeling and Observer Support Files</h3>
+
+<h4><code>observer_matrices.py</code></h4>
+<p>
+This file stores the discrete-time observer matrices used by the observer task. It directly represents the mathematical model of the robot.
+</p>
+
+<h3>Startup and Support Files</h3>
+
+<h4><code>boot.py</code></h4>
+<p>
+This file is the standard MicroPython boot file. It is mostly a support file, but it still forms part of the full software package.
+</p>
+
+<h3>How the Files Work Together</h3>
+
+<p>
+The hardware interface classes provide access to the motors, encoders, line sensors, and IMU. The task infrastructure files provide the scheduler and communication tools. The task files sit on top of those layers and implement the actual robot behavior: reading sensors, estimating states, controlling motion, detecting events, and responding to user commands. Finally, the support files such as the observer matrix file and boot file complete the overall software package.
+</p>
+
+<details>
+<summary>Click to expand a quick breakdown of key variables and data flow</summary>
+<ul>
+<li><b>goFlag / MotorGo Shares:</b> enable or disable motor motion</li>
+<li><b>vRef / velocity setpoint Shares:</b> desired motor speeds sent by high-level control</li>
+<li><b>psi and psiDot Shares:</b> IMU heading and yaw-rate measurements</li>
+<li><b>s_hat, psi_hat, wL_hat, wR_hat:</b> observer-estimated robot states</li>
+<li><b>Queues:</b> used for logging and buffered data transfer</li>
+</ul>
+</details>
+
+</div>
+</section>
+
+<section id="docs">
+<h2>Detailed Code Documentation</h2>
+<div class="card">
+
+<p>
+The files below link to dedicated documentation pages for each source file. Each documentation page explains the file’s role in the project, important classes or tasks, key variables, and how that file interacts with the rest of the software system. A second link is also provided to open the original source code directly. CLICK ON THE BLUE BUBBLES THEMSELVES TO OPEN EACH SPECIFIC PAGE. EX: Click on main.py bubble
+</p>
+
+<h3>Main and Task Files</h3>
+
+<ul>
+
+<li>
+<a href="pages/main_py.html" target="_blank" class="doc-button">
+  <span class="name">main.py</span>
+</a>
+ – Initializes hardware, shared variables, queues, and the task scheduler for the full robot system.
+<a href="main.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_course_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">course.py</span>
+</a>
+ – Implements the high-level finite state machine for the full obstacle course sequence.
+<a href="task_course.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_motor_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">motor.py</span>
+</a>
+ – Controls each motor using encoder feedback and PI velocity regulation.
+<a href="task_motor.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_line_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">line.py</span>
+</a>
+ – Performs centroid-based line sensing and generates steering-related speed commands.
+<a href="task_line.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_imu_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">imu.py</span>
+</a>
+ – Reads, filters, and calibrates IMU heading and yaw-rate data.
+<a href="task_imu.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_observer_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">observer.py</span>
+</a>
+ – Runs the discrete-time state observer and publishes estimated robot states.
+<a href="task_observer.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_bump_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">bump.py</span>
+</a>
+ – Detects collision events and forces a stop response when the bump switches are triggered.
+<a href="task_bump.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_start_button_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">start_button.py</span>
+</a>
+ – Handles debounced pushbutton input to start or stop the course.
+<a href="task_start_button.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_user_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">user.py</span>
+</a>
+ – Provides the serial user interface and runtime command interaction.
+<a href="task_user.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_user_cmds_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">user_cmds.py</span>
+</a>
+ – Contains helper command logic used by the serial interface.
+<a href="task_user_cmds.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_log_est_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">log_est.py</span>
+</a>
+ – Logs observer estimates and computes dead-reckoned position for analysis.
+<a href="task_log_est.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_garbage_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">garbage.py</span>
+</a>
+ – Runs background garbage collection to help manage MicroPython memory usage.
+<a href="task_garbage.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/debug_motor_py.html" target="_blank" class="doc-button">
+  <span class="name">debug_motor.py</span>
+</a>
+ – Standalone debugging script for validating motor task behavior.
+<a href="debug_motor.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/test_motor_py.html" target="_blank" class="doc-button">
+  <span class="name">test_motor.py</span>
+</a>
+ – Direct motor test script for checking motor driver operation outside the full system.
+<a href="test_motor.py" target="_blank">[Open raw file]</a>
+</li>
+
+</ul>
+
+<h3>Driver, Utility, and Support Files</h3>
+
+<ul>
+
+<li>
+<a href="pages/line_sensor_py.html" target="_blank" class="doc-button">
+  <span class="name">line_sensor.py</span>
+</a>
+ – Defines the line sensor array class, including ADC reads, emitter control, and calibration support.
+<a href="line_sensor.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/motor_driver_py.html" target="_blank" class="doc-button">
+  <span class="name">motor_driver.py</span>
+</a>
+ – Implements the motor driver abstraction for PWM, direction, and enable control.
+<a href="motor_driver.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/encoder_py.html" target="_blank" class="doc-button">
+  <span class="name">encoder.py</span>
+</a>
+ – Implements encoder counting, wraparound handling, and velocity estimation.
+<a href="encoder.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/driver_py.html" target="_blank" class="doc-button">
+  <span class="name">driver.py</span>
+</a>
+ – Low-level BNO055 IMU driver for I2C communication and calibration data handling.
+<a href="driver.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/task_share_py.html" target="_blank" class="doc-button">
+  <span class="prefix">task_</span><span class="name">share.py</span>
+</a>
+ – Defines the Share and Queue classes used for communication between cooperative tasks.
+<a href="task_share.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/cotask_py.html" target="_blank" class="doc-button">
+  <span class="name">cotask.py</span>
+</a>
+ – Implements the cooperative task scheduler and task timing framework.
+<a href="cotask.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/observer_matrices_py.html" target="_blank" class="doc-button">
+  <span class="name">observer_matrices.py</span>
+</a>
+ – Stores the discrete-time observer matrices used by the estimator.
+<a href="observer_matrices.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/boot_py.html" target="_blank" class="doc-button">
+  <span class="name">boot.py</span>
+</a>
+ – Standard MicroPython boot file included as part of the final software package.
+<a href="boot.py" target="_blank">[Open raw file]</a>
+</li>
+
+<li>
+<a href="pages/line_calib_json.html" target="_blank" class="doc-button">
+  <span class="name">line_calib.json</span>
+</a>
+ – Stores white and black calibration values for the line sensor array.
+<a href="line_calib.json" target="_blank">[Open raw file]</a>
+</li>
+
+</ul>
+
+</div>
+</section>
+
+<section id="diagrams">
+<h2>System Diagrams and Additional Analysis</h2>
+<div class="card">
+
+<p>
+Some of the most important parts of the project do not fit naturally inside a single source file, so this section is meant to highlight the system-level pieces that connect everything together. This includes the overall task structure and the high-level sequence of course behaviors.
+</p>
+
+<h3>High-Level Task Interaction Diagram</h3>
+<p>
+A task interaction diagram is useful because it shows how the major software modules communicate through Shares and Queues. This helps explain how the line-following, motor-control, IMU, observer, bump, and user-interface tasks are related at the system level instead of only as individual files.
+</p>
+
+<div class="figure">
+  <img src="images/images/task_diagram.png" alt="High-level task interaction diagram">
+  <p class="figure-caption">Figure 6. High-level task diagram showing communication between the major software modules.</p>
+</div>
+
+<h3>Course State Machine</h3>
+<p>
+The obstacle course behavior was implemented as a sequence of states rather than one continuous block of control logic. A state transition diagram makes it easier to explain how the robot moves between line following, straight driving, turning, bump detection, and restart behavior.
+</p>
+
+<div class="figure">
+  <img src="images/images/state_diagram.png" alt="High-level finite-state machine diagram">
+  <p class="figure-caption">Figure 7. High-level state transition diagram for the course logic. Related states are grouped into phases.</p>
+</div>
+
+<h3>Why These Diagrams Matter</h3>
+<p>
+One thing we realized during the project is that code alone does not always communicate the full design very well. The diagrams help bridge the gap between the implementation and the bigger system-level thinking behind it. They also make the project easier for someone else to understand quickly, especially if they want to rebuild or extend it later.
+</p>
+
+</div>
+</section>
+
+<section id="results">
+<h2>Analysis and Results</h2>
+<div class="card">
+
+<h3>Overall Performance</h3>
+
+<p>
+By the final stages of the project, the robot was able to demonstrate stable line following, reliable bump detection, and a well-structured software workflow for tuning and testing. The system showed that the mechanical, electrical, and software components were working together as an integrated whole rather than as isolated parts.
+</p>
+
+<h3>Line Following Behavior</h3>
+
+<p>
+The line-following performance improved significantly once the sensor calibration and control gains were tuned. The centroid-based method gave the robot much smoother behavior than a simple threshold-based approach would have. Instead of abruptly reacting to a single sensor crossing a threshold, the robot could respond continuously based on where the line was located relative to the array.
+</p>
+
+<p>
+Another important improvement came from the weak-signal handling logic. Real line sensors are never perfectly clean, and there were times when the line signal became less distinct. The code’s decision to hold the last valid line position when the signal confidence dropped helped avoid sudden, unrealistic spins and made the line-follow behavior much more stable.
+</p>
+
+<h3>Motor and Motion Performance</h3>
+
+<p>
+The encoder-based PI motor control improved repeatability by reducing the dependence on open-loop timing. Without feedback, even small changes in battery level or friction would have changed the robot’s motion noticeably. With feedback, the robot could regulate its wheel behavior more consistently, which was especially useful when transitioning between behaviors or trying to maintain stable line-follow speed.
+</p>
+
+<h3>Observer Performance</h3>
+
+<p>
+The observer added real value to the project because it gave a cleaner and more structured estimate of the robot’s motion than raw measurements alone. Even when not used to fully close the loop on every behavior, it provided strong visibility into what the robot was doing internally. That made it useful both as a control-related feature and as a diagnostic tool.
+</p>
+
+<p>
+More importantly, implementing the observer showed that the project moved beyond surface-level autonomy. It connected the robot to formal modeling concepts from class and demonstrated that the system could estimate position, heading, and wheel speeds using a state-space framework.
+</p>
+
+<h3>Challenges Encountered</h3>
+
+<ul>
+<li><b>Sensor calibration:</b> reflectance sensors were sensitive to mounting height and surface conditions</li>
+<li><b>Controller tuning:</b> gains needed to be balanced between responsiveness and stability</li>
+<li><b>Heading management:</b> IMU angle wrapping and noise had to be handled carefully</li>
+<li><b>Memory constraints:</b> as more tasks and features were added, efficient use of memory became more important</li>
+<li><b>System integration:</b> combining many working subsystems into one reliable robot was harder than getting any one subsystem working by itself</li>
+</ul>
+
+<h3>Lessons Learned</h3>
+
+<p>
+Probably the most valuable lesson from this project was that successful robotics work is mostly about integration. It is one thing to make a line sensor work on the bench or to make an encoder report counts correctly. It is another thing to combine all of those pieces into a robot that behaves predictably in real time.
+</p>
+
+<p>
+This project also reinforced how important testing and iteration are. A lot of the final performance came from repeatedly running the system, observing what went wrong, and refining both the hardware setup and the software logic. In that sense, the final robot reflects not just the first design idea, but the full debugging and refinement process behind it.
+</p>
+
+<h3>Future Improvements</h3>
+
+<ul>
+<li>Use the observer estimates more directly in the control loop</li>
+<li>Use IMU feedback more aggressively for heading correction during turns</li>
+<li>Add more logging and visualization of state estimates versus measured values</li>
+<li>Further refine the sensor mounting to improve repeatability</li>
+<li>Retune the observer poles for faster convergence, as noted in the observer matrix comments</li>
+</ul>
+
+</div>
+</section>
+
+<section id="media">
+<h2>Photos and Figures</h2>
+<div class="card">
+
+<p>
+This section provides visual documentation of the completed robot hardware. These images show the final integrated build, sensor placement, and assembly details that support the written design discussion.
+</p>
+
+<h3>Included Visual Documentation</h3>
+<ul>
+<li>Full assembled robot</li>
+<li>Underside view showing line sensor placement</li>
+<li>Front view showing bump switches</li>
+<li>Additional hardware view of the completed assembly</li>
+</ul>
+
+<div class="figure-row">
+  <div class="figure">
+    <img src="/Romi_Lebron.github.io/images/images/IMG_4284.jpeg" alt="Full assembled Romi robot">
+    <p class="figure-caption">Figure 8. Overall view of the fully assembled Romi robot.</p>
+  </div>
+  <div class="figure">
+    <img src="/Romi_Lebron.github.io/images/images/IMG_4285.jpeg" alt="Underside showing line sensor placement">
+    <p class="figure-caption">Figure 9. Underside view showing the line sensor mounting location.</p>
+  </div>
+</div>
+
+<div class="figure-row">
+  <div class="figure">
+    <img src="/Romi_Lebron.github.io/images/images/IMG_4286.jpeg" alt="Front bump switches">
+    <p class="figure-caption">Figure 10. Front hardware view showing bump-switch placement.</p>
+  </div>
+  <div class="figure">
+    <img src="/Romi_Lebron.github.io/images/images/IMG_4287.jpeg" alt="Additional robot hardware view">
+    <p class="figure-caption">Figure 11. Additional hardware view of the completed robot assembly.</p>
+  </div>
+</div>
+
+</div>
+</section>
+
+<section id="video">
+<h2>Demonstration Video</h2>
+<div class="card">
+
+<p>
+A demonstration video is included here to show the robot operating at its best level of performance. The video demonstrates line following, obstacle interaction, and the full autonomous behavior sequence.
+</p>
+
+<iframe 
+src="https://www.youtube.com/embed/utpQ2S87dvw"
+title="Romi Robot Demo"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+<p>
+Or, open it directly:
+</p>
+
+<a class="button-link" href="https://youtu.be/utpQ2S87dvw" target="_blank">
+Watch the Demonstration Video
+</a>
+
+</div>
+</section>
+
+<section id="repository">
+<h2>Project Repository</h2>
+<div class="card">
+
+<p>
+The full project repository contains the source code, supporting documentation, and design materials used in this project. The goal of the repository is not just to store code, but to make the full engineering process understandable and reproducible. Someone looking through the repository should be able to follow how the robot was built, how the software is organized, and how the system was tested and demonstrated.
+</p>
+
+<p>
+In addition to the Python source files, the repository includes the portfolio website, documentation pages, wiring information, calibration files, images, and supporting material used to explain the project. Because the robot mainly uses standard hardware and direct mounting methods rather than large custom manufactured parts, the emphasis was placed on clearly documenting the mounting approach, sensor locations, electrical connections, and software structure.
+</p>
+
+<h3>Key Files</h3>
+<div class="file-links">
+<a href="main.py" target="_blank" class="repo-button">main.py</a>
+<a href="task_course.py" target="_blank" class="repo-button">task_course.py</a>
+<a href="task_motor.py" target="_blank" class="repo-button">task_motor.py</a>
+<a href="task_line.py" target="_blank" class="repo-button">task_line.py</a>
+<a href="task_imu.py" target="_blank" class="repo-button">task_imu.py</a>
+<a href="task_observer.py" target="_blank" class="repo-button">task_observer.py</a>
+<a href="task_bump.py" target="_blank" class="repo-button">task_bump.py</a>
+<a href="task_start_button.py" target="_blank" class="repo-button">task_start_button.py</a>
+<a href="task_user.py" target="_blank" class="repo-button">task_user.py</a>
+<a href="task_user_cmds.py" target="_blank" class="repo-button">task_user_cmds.py</a>
+<a href="task_log_est.py" target="_blank" class="repo-button">task_log_est.py</a>
+<a href="task_garbage.py" target="_blank" class="repo-button">task_garbage.py</a>
+<a href="debug_motor.py" target="_blank" class="repo-button">debug_motor.py</a>
+<a href="test_motor.py" target="_blank" class="repo-button">test_motor.py</a>
+<a href="line_sensor.py" target="_blank" class="repo-button">line_sensor.py</a>
+<a href="motor_driver.py" target="_blank" class="repo-button">motor_driver.py</a>
+<a href="encoder.py" target="_blank" class="repo-button">encoder.py</a>
+<a href="driver.py" target="_blank" class="repo-button">driver.py</a>
+<a href="task_share.py" target="_blank" class="repo-button">task_share.py</a>
+<a href="cotask.py" target="_blank" class="repo-button">cotask.py</a>
+<a href="observer_matrices.py" target="_blank" class="repo-button">observer_matrices.py</a>
+<a href="boot.py" target="_blank" class="repo-button">boot.py</a>
+<a href="line_calib.json" target="_blank" class="repo-button">line_calib.json</a>
+</div>
+
+<h3>Key Detailed Documentation Pages</h3>
+<div class="file-links">
+<a href="pages/main_py.html" target="_blank" class="repo-button">main.py docs</a>
+<a href="pages/task_motor_py.html" target="_blank" class="repo-button">task_motor.py docs</a>
+<a href="pages/task_line_py.html" target="_blank" class="repo-button">task_line.py docs</a>
+<a href="pages/task_imu_py.html" target="_blank" class="repo-button">task_imu.py docs</a>
+<a href="pages/task_observer_py.html" target="_blank" class="repo-button">task_observer.py docs</a>
+</div>
+
+<p>
+These are just a few of the main documentation pages. For a more complete breakdown of every file, use the Detailed Code Documentation section above.
+</p>
+
+<h3>Repository Link</h3>
+<a href="https://github.com/michaelmilner5/Romi_Lebron.github.io" target="_blank" class="repo-button">
+Open Full GitHub Repository
+</a>
+
+<h3>Reproducibility</h3>
+<p>
+To make the project reproducible, the repository includes the portfolio website, documentation pages, source code, figures, calibration files, and supporting robot software files needed to understand the full system design and implementation. Our intention was that another student could use the repository not only to read about the project, but also to understand how to rebuild the robot and how the software pieces work together.
+</p>
+
+</div>
+</section>
+
+<section id="external">
+<h2>External Reference</h2>
+<div class="card">
+
+<p>
+For external reference related to the project and course support, the following contact is included:
+</p>
+
+<ul>
+<li><b>Charlie Refvem</b> – <a href="mailto:crefvem@calpoly.edu">crefvem@calpoly.edu</a></li>
+</ul>
+
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>Romi Robot Project | Tyler Lum and Michael Milner</p>
+</footer>
+
+</body>
+</html>
