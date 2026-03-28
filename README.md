@@ -92,7 +92,7 @@ The robot is built on the Pololu Romi platform and includes:
 ## Project Website
 For full documentation, design details, and media:
 
-https://michaelmilner5.github.io/Romi_Lebron.github.io/
+https://tylerlum40portfolio.github.io/Romi-Robot/
 
 ---
 
